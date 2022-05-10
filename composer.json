@@ -1,0 +1,15 @@
+{
+    "name": "ilyazherebcov/task_tracker",
+    "autoload": {
+        "psr-4": {
+            "Ilyazherebcov\\TaskTracker\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilya Zherebtsov",
+            "email": "izherebcov@gmail.com"
+        }
+    ],
+    "require": {}
+}

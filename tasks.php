@@ -8,8 +8,6 @@ $currentPage = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
 $itemsPerPage = 10;
 $ofset = ($currentPage * $itemsPerPage) - $itemsPerPage;
 $tasksBd = $conn->query(query: "SELECT * FROM tasks limit $ofset, $itemsPerPage");
-print_r($ofset);
-print_r("\n");
 
 $nextPage = $currentPage + 1;
 
@@ -29,21 +27,16 @@ if (array_key_exists('user', $_SESSION)) {
   }
 }
 
-
-
 if (isset($_GET['sortingEmail'])) {
-  echo 'кнопка нажалась';
   $_SESSION['sort'] = 'email';
 }
 
 if (isset($_GET['sortingName'])) {
-  echo 'кнопка нажалась';
   $_SESSION['sort'] = 'name';
 }
 
 
 if (isset($_GET['sortingStatus'])) {
-  echo 'кнопка нажалась';
   $_SESSION['sort'] = 'status';
 }
 
@@ -75,13 +68,6 @@ foreach ($tasks as $index => $task) {
   }
 }
 
-
-
-// if (count($tasks) < $itemsPerPage) {
-//   $nextDisabled = true;
-// } else {
-//   $nextDisabled = false;
-// }
 $countBd = $conn->query(query: "SELECT COUNT(*) FROM tasks");
 while ($result = mysqli_fetch_array($countBd, MYSQLI_ASSOC)) {
   $count[] = $result;
