@@ -73,7 +73,6 @@ while ($result = mysqli_fetch_array($countBd, MYSQLI_ASSOC)) {
   $count[] = $result;
 }
 $count = $count[0]['COUNT(*)'];
-print_r($count);
 
 if ($count < $ofset + $itemsPerPage) {
   $nextDisabled = true;
