@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'bd.php';
+require_once 'db.php';
 
 $currentPage = isset($_REQUEST['page']) ? $_REQUEST['page'] : 1;
 $itemsPerPage = 10;

@@ -1,11 +1,9 @@
 <html>
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
-
 <body>
   <div class="container">
     <div class="row justify-content-md-center">
@@ -15,12 +13,13 @@
     <?php if (!$editAllowed) : ?>
       <a href="authorization.php" class="btn btn-primary">Войти как администратор</a>
     <?php endif ?>
-    <a href="newTask.phtml" class="btn btn-secondary">Новая задача</a>
+    <a href="controllerTask.php?newTask" class="btn btn-secondary">Новая задача</a>
     <?php if ($editAllowed) : ?>
       <a href="exit.php" class="btn btn-danger">Выйти</a>
     <?php endif ?>
 
-    <form action="tasks.php" method="GET">
+    <form action="controllerTask.php" method="GET">
+
       <table class="table">
         <thead>
           <tr>
@@ -54,7 +53,7 @@
         </td>
         <?php if ($editAllowed) : ?>
           <td>
-            <a href="edit.php?id=<?php echo $task['id'] ?>">Редактировать</a>
+            <a href="controllerTask.php?id=<?php echo $task['id'] ?>">Редактировать</a>
           </td>
         <?php endif ?>
 
