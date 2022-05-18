@@ -9,10 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['login'] === 'admin' && $_POST['password'] === '123') {
+    if ($_POST['login'] === 'admin' && $_POST['password'] === '123') { //todo: логин и пароль пернести в конфиг
         $autp = 'admin';
         $_SESSION['user'] = $autp;
-        header('Location: tasks.php');
+        header('Location: index.php');
     } else {
         $login = $_POST['login'];
         $pass = $_POST['password'];

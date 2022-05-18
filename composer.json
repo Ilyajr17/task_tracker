@@ -2,7 +2,8 @@
     "name": "ilyazherebcov/task_tracker",
     "autoload": {
         "psr-4": {
-            "Ilyazherebcov\\TaskTracker\\": "src/"
+            "App\\": "app/",
+            "Core\\": "core/"
         }
     },
     "authors": [

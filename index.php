@@ -1,3 +1,3 @@
 <?php
 
-header('Location: tasks.php');
+header('Location: controllerTask.php');

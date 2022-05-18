@@ -1,6 +1,8 @@
 <?php
 
-require 'DbManager.php';
+namespace App;
+
+use App\DbManager;
 
 class TaskManager
 {
@@ -28,5 +30,5 @@ class TaskManager
         $dbManager = new DbManager();
 
         return $dbManager->getTask($id);
-    }
+    } 
 }

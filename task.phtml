@@ -39,9 +39,8 @@
 
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Текст задачи</label>
-                <textarea class="form-control" name="textTask" id="exampleFormControlTextarea1" rows="3" required><?php if ($viewEdit): echo $task['texttask']; endif?></textarea>
+                <textarea class="form-control" name="textTask" id="exampleFormControlTextarea1" rows="3" required><?php if ($viewEdit) : echo $task['texttask'];endif ?></textarea>
             </div>
-
             <?php if ($viewEdit) : ?>
                 <button type="submit" class="btn btn-primary" name="saveTask">Отредактровать задачу</button>
             <?php endif ?>
@@ -49,11 +48,7 @@
                 <button type="submit" class="btn btn-primary" name="saveTask">Создать задачу</button>
             <?php endif ?>
         </form>
-
-        <form action="tasks.php" method="get">
-            <button type="submit" class="btn btn-primary">Список задач</button>
-        </form>
-
+        <a href="index.php" class="btn btn-primary">Список задач</a>
     </div>
 </div>
 
